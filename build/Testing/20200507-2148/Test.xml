@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20200507-2148-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.17.2"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Windows"
+	Hostname="DESKTOP-C1713AA"
+	OSRelease=" Professional"
+	OSVersion=" (Build 18363)"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="14"
+	ProcessorCacheSize="-1"
+	NumberOfLogicalCPU="4"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="19246"
+	TotalPhysicalMemory="16302"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="3600"
+	>
+	<Testing>
+		<StartDateTime>May 08 01:59 RTZ 2 (ceia)</StartDateTime>
+		<StartTestTime>1588892358</StartTestTime>
+		<TestList>
+			<Test>./test/ExampleTests</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>ExampleTests</Name>
+			<Path>./test</Path>
+			<FullName>./test/ExampleTests</FullName>
+			<FullCommandLine>C:\21\test_libft\build\test\ExampleTests.exe</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0235174</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>C:\21\test_libft\build\test\ExampleTests.exe</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJyNkDELwjAQhff8ihvt0NQ6Cg6i4iCotDiVIrGmJZDeSXrVv2/bSFFB8E2X3Jd3eZe0iAYrqJXBSQCloxpW82gWR6wbPltzKTmqiCqr+4v3snFFVA1U/1gWhcgWo3JIXs4x9Ix3ftVNa1hLkYWjcthauijr+xrvxhHWGjtWc9jevuB3z+EHJZ+ZLD20Exkkpz0Myr+bcjjHHeN12P1kYDKFugn+nut5YGJlA/FfNtbKhVd64Ofmfm0MnEL5OacLclym6Wbdh/WsFE+iz5Wf====</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>May 08 01:59 RTZ 2 (ceia)</EndDateTime>
+		<EndTestTime>1588892358</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

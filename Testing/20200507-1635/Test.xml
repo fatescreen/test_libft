@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20200507-1635-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.17.2"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Windows"
+	Hostname="DESKTOP-C1713AA"
+	OSRelease=" Professional"
+	OSVersion=" (Build 18363)"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="14"
+	ProcessorCacheSize="-1"
+	NumberOfLogicalCPU="4"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="19246"
+	TotalPhysicalMemory="16302"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="3600"
+	>
+	<Testing>
+		<StartDateTime>May 07 19:37 RTZ 2 (ceia)</StartDateTime>
+		<StartTestTime>1588869424</StartTestTime>
+		<TestList>
+			<Test>./test/ExampleTests</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>ExampleTests</Name>
+			<Path>./test</Path>
+			<FullName>./test/ExampleTests</FullName>
+			<FullCommandLine>C:\21\Example\test\ExampleTests.exe</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0059289</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>C:\21\Example\test\ExampleTests.exe</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJyNUE1Lw0AQve+vmGNzyGJ7LPQgtvQgVkn1lARZ4xgCuzNld9L68826oTSCkHd6zLw3H6/oiTpqwZmOFhl8eXbwsK5Wy2r3bdzJYtUytxYFg9zS4Juqjew9OnXTqHJzRQ3FOHYJUZPGjjz0naBWZX5FDXvLH8amPtK580wOadCi5P3pj/h25njk61AIqoTi7QC/qCcdvUXHFMQbwX2sPJnGczQkPD/OM8DiDlzI5p2TxCAsxmZq3r+CxueffKFpmv+lCN6Qnu4ZXnq5Px5325hB0mr1A36+nDk=</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>May 07 19:37 RTZ 2 (ceia)</EndDateTime>
+		<EndTestTime>1588869424</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

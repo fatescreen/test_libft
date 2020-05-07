@@ -1,0 +1,2 @@
+C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/ar.exe qc libtest_libft.a  CMakeFiles/test_libft.dir/C_/21/libft/ft_tolower.c.obj
+C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/ranlib.exe libtest_libft.a
