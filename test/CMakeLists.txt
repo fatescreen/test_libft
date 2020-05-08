@@ -1,13 +1,11 @@
 
+set(This tests)
 
-set(This ExampleTests)
+list(TRANSFORM FILES_TO_TRANSLATE PREPEND ${CMAKE_CURRENT_SOURCE_DIR})
 
+file(GLOB_RECURSE src "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
 
-set(Sources 
-	${CMAKE_CURRENT_SOURCE_DIR}/src/test_ft_tolower.cpp
-)
-
-add_executable(${This} ${Sources})
+add_executable(${This} ${src})
 
 target_link_libraries(${This} PUBLIC
 	gtest_main
@@ -18,3 +16,4 @@ add_test(
 	NAME ${This}
 	COMMAND ${This}
 )
+

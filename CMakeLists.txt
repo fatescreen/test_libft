@@ -10,17 +10,10 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 set(CMAKE_COMPILER_IS_GNUCC TRUE)
 
 enable_testing()
-
 add_subdirectory(googletest)
 
-set(Headers
-	${CMAKE_CURRENT_SOURCE_DIR}/../libft/libft.h
-)
+file(GLOB_RECURSE src "${CMAKE_CURRENT_SOURCE_DIR}/../libft/*.c")
+file(GLOB_RECURSE inc "${CMAKE_CURRENT_SOURCE_DIR}/../libft/*.h")
 
-set(Sources
-	${CMAKE_CURRENT_SOURCE_DIR}/../libft/ft_tolower.c
-)
-
-add_library(${This} STATIC ${Sources} ${Headers})
-
+add_library(${This} STATIC ${src} ${inc})
 add_subdirectory(test)
