@@ -1,2 +1,4 @@
 ExampleTests 5 0.00243908
+tests 0 0
 ---
+tests

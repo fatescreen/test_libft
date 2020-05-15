@@ -67,25 +67,13 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\21\Example
+CMAKE_SOURCE_DIR = C:\21\test_libft
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\21\Example
+CMAKE_BINARY_DIR = C:\21\test_libft
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -154,11 +142,23 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\21\Example\CMakeFiles C:\21\Example\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\21\test_libft\CMakeFiles C:\21\test_libft\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\21\Example\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\21\test_libft\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -187,17 +187,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Example
+# Target rules for targets named test_libft
 
 # Build rule for target.
-Example: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Example
-.PHONY : Example
+test_libft: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test_libft
+.PHONY : test_libft
 
 # fast build rule for target.
-Example/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Example.dir\build.make CMakeFiles/Example.dir/build
-.PHONY : Example/fast
+test_libft/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/build
+.PHONY : test_libft/fast
 
 #=============================================================================
 # Target rules for targets named gmock_main
@@ -252,44 +252,287 @@ gtest_main/fast:
 .PHONY : gtest_main/fast
 
 #=============================================================================
-# Target rules for targets named ExampleTests
+# Target rules for targets named tests
 
 # Build rule for target.
-ExampleTests: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 ExampleTests
-.PHONY : ExampleTests
+tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 tests
+.PHONY : tests
 
 # fast build rule for target.
-ExampleTests/fast:
-	$(MAKE) $(MAKESILENT) -f test\CMakeFiles\ExampleTests.dir\build.make test/CMakeFiles/ExampleTests.dir/build
-.PHONY : ExampleTests/fast
+tests/fast:
+	$(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/build
+.PHONY : tests/fast
 
-Example.obj: Example.cpp.obj
+C_/21/libft/ft_atoi.obj: C_/21/libft/ft_atoi.c.obj
 
-.PHONY : Example.obj
+.PHONY : C_/21/libft/ft_atoi.obj
 
 # target to build an object file
-Example.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Example.dir\build.make CMakeFiles/Example.dir/Example.cpp.obj
-.PHONY : Example.cpp.obj
+C_/21/libft/ft_atoi.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_atoi.c.obj
+.PHONY : C_/21/libft/ft_atoi.c.obj
 
-Example.i: Example.cpp.i
+C_/21/libft/ft_atoi.i: C_/21/libft/ft_atoi.c.i
 
-.PHONY : Example.i
+.PHONY : C_/21/libft/ft_atoi.i
 
 # target to preprocess a source file
-Example.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Example.dir\build.make CMakeFiles/Example.dir/Example.cpp.i
-.PHONY : Example.cpp.i
+C_/21/libft/ft_atoi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_atoi.c.i
+.PHONY : C_/21/libft/ft_atoi.c.i
 
-Example.s: Example.cpp.s
+C_/21/libft/ft_atoi.s: C_/21/libft/ft_atoi.c.s
 
-.PHONY : Example.s
+.PHONY : C_/21/libft/ft_atoi.s
 
 # target to generate assembly for a file
-Example.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Example.dir\build.make CMakeFiles/Example.dir/Example.cpp.s
-.PHONY : Example.cpp.s
+C_/21/libft/ft_atoi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_atoi.c.s
+.PHONY : C_/21/libft/ft_atoi.c.s
+
+C_/21/libft/ft_isalnum.obj: C_/21/libft/ft_isalnum.c.obj
+
+.PHONY : C_/21/libft/ft_isalnum.obj
+
+# target to build an object file
+C_/21/libft/ft_isalnum.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_isalnum.c.obj
+.PHONY : C_/21/libft/ft_isalnum.c.obj
+
+C_/21/libft/ft_isalnum.i: C_/21/libft/ft_isalnum.c.i
+
+.PHONY : C_/21/libft/ft_isalnum.i
+
+# target to preprocess a source file
+C_/21/libft/ft_isalnum.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_isalnum.c.i
+.PHONY : C_/21/libft/ft_isalnum.c.i
+
+C_/21/libft/ft_isalnum.s: C_/21/libft/ft_isalnum.c.s
+
+.PHONY : C_/21/libft/ft_isalnum.s
+
+# target to generate assembly for a file
+C_/21/libft/ft_isalnum.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_isalnum.c.s
+.PHONY : C_/21/libft/ft_isalnum.c.s
+
+C_/21/libft/ft_isalpha.obj: C_/21/libft/ft_isalpha.c.obj
+
+.PHONY : C_/21/libft/ft_isalpha.obj
+
+# target to build an object file
+C_/21/libft/ft_isalpha.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_isalpha.c.obj
+.PHONY : C_/21/libft/ft_isalpha.c.obj
+
+C_/21/libft/ft_isalpha.i: C_/21/libft/ft_isalpha.c.i
+
+.PHONY : C_/21/libft/ft_isalpha.i
+
+# target to preprocess a source file
+C_/21/libft/ft_isalpha.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_isalpha.c.i
+.PHONY : C_/21/libft/ft_isalpha.c.i
+
+C_/21/libft/ft_isalpha.s: C_/21/libft/ft_isalpha.c.s
+
+.PHONY : C_/21/libft/ft_isalpha.s
+
+# target to generate assembly for a file
+C_/21/libft/ft_isalpha.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_isalpha.c.s
+.PHONY : C_/21/libft/ft_isalpha.c.s
+
+C_/21/libft/ft_isascii.obj: C_/21/libft/ft_isascii.c.obj
+
+.PHONY : C_/21/libft/ft_isascii.obj
+
+# target to build an object file
+C_/21/libft/ft_isascii.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_isascii.c.obj
+.PHONY : C_/21/libft/ft_isascii.c.obj
+
+C_/21/libft/ft_isascii.i: C_/21/libft/ft_isascii.c.i
+
+.PHONY : C_/21/libft/ft_isascii.i
+
+# target to preprocess a source file
+C_/21/libft/ft_isascii.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_isascii.c.i
+.PHONY : C_/21/libft/ft_isascii.c.i
+
+C_/21/libft/ft_isascii.s: C_/21/libft/ft_isascii.c.s
+
+.PHONY : C_/21/libft/ft_isascii.s
+
+# target to generate assembly for a file
+C_/21/libft/ft_isascii.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_isascii.c.s
+.PHONY : C_/21/libft/ft_isascii.c.s
+
+C_/21/libft/ft_isdigit.obj: C_/21/libft/ft_isdigit.c.obj
+
+.PHONY : C_/21/libft/ft_isdigit.obj
+
+# target to build an object file
+C_/21/libft/ft_isdigit.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_isdigit.c.obj
+.PHONY : C_/21/libft/ft_isdigit.c.obj
+
+C_/21/libft/ft_isdigit.i: C_/21/libft/ft_isdigit.c.i
+
+.PHONY : C_/21/libft/ft_isdigit.i
+
+# target to preprocess a source file
+C_/21/libft/ft_isdigit.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_isdigit.c.i
+.PHONY : C_/21/libft/ft_isdigit.c.i
+
+C_/21/libft/ft_isdigit.s: C_/21/libft/ft_isdigit.c.s
+
+.PHONY : C_/21/libft/ft_isdigit.s
+
+# target to generate assembly for a file
+C_/21/libft/ft_isdigit.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_isdigit.c.s
+.PHONY : C_/21/libft/ft_isdigit.c.s
+
+C_/21/libft/ft_isprint.obj: C_/21/libft/ft_isprint.c.obj
+
+.PHONY : C_/21/libft/ft_isprint.obj
+
+# target to build an object file
+C_/21/libft/ft_isprint.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_isprint.c.obj
+.PHONY : C_/21/libft/ft_isprint.c.obj
+
+C_/21/libft/ft_isprint.i: C_/21/libft/ft_isprint.c.i
+
+.PHONY : C_/21/libft/ft_isprint.i
+
+# target to preprocess a source file
+C_/21/libft/ft_isprint.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_isprint.c.i
+.PHONY : C_/21/libft/ft_isprint.c.i
+
+C_/21/libft/ft_isprint.s: C_/21/libft/ft_isprint.c.s
+
+.PHONY : C_/21/libft/ft_isprint.s
+
+# target to generate assembly for a file
+C_/21/libft/ft_isprint.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_isprint.c.s
+.PHONY : C_/21/libft/ft_isprint.c.s
+
+C_/21/libft/ft_strncmp.obj: C_/21/libft/ft_strncmp.c.obj
+
+.PHONY : C_/21/libft/ft_strncmp.obj
+
+# target to build an object file
+C_/21/libft/ft_strncmp.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_strncmp.c.obj
+.PHONY : C_/21/libft/ft_strncmp.c.obj
+
+C_/21/libft/ft_strncmp.i: C_/21/libft/ft_strncmp.c.i
+
+.PHONY : C_/21/libft/ft_strncmp.i
+
+# target to preprocess a source file
+C_/21/libft/ft_strncmp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_strncmp.c.i
+.PHONY : C_/21/libft/ft_strncmp.c.i
+
+C_/21/libft/ft_strncmp.s: C_/21/libft/ft_strncmp.c.s
+
+.PHONY : C_/21/libft/ft_strncmp.s
+
+# target to generate assembly for a file
+C_/21/libft/ft_strncmp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_strncmp.c.s
+.PHONY : C_/21/libft/ft_strncmp.c.s
+
+C_/21/libft/ft_strnstr.obj: C_/21/libft/ft_strnstr.c.obj
+
+.PHONY : C_/21/libft/ft_strnstr.obj
+
+# target to build an object file
+C_/21/libft/ft_strnstr.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_strnstr.c.obj
+.PHONY : C_/21/libft/ft_strnstr.c.obj
+
+C_/21/libft/ft_strnstr.i: C_/21/libft/ft_strnstr.c.i
+
+.PHONY : C_/21/libft/ft_strnstr.i
+
+# target to preprocess a source file
+C_/21/libft/ft_strnstr.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_strnstr.c.i
+.PHONY : C_/21/libft/ft_strnstr.c.i
+
+C_/21/libft/ft_strnstr.s: C_/21/libft/ft_strnstr.c.s
+
+.PHONY : C_/21/libft/ft_strnstr.s
+
+# target to generate assembly for a file
+C_/21/libft/ft_strnstr.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_strnstr.c.s
+.PHONY : C_/21/libft/ft_strnstr.c.s
+
+C_/21/libft/ft_tolower.obj: C_/21/libft/ft_tolower.c.obj
+
+.PHONY : C_/21/libft/ft_tolower.obj
+
+# target to build an object file
+C_/21/libft/ft_tolower.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_tolower.c.obj
+.PHONY : C_/21/libft/ft_tolower.c.obj
+
+C_/21/libft/ft_tolower.i: C_/21/libft/ft_tolower.c.i
+
+.PHONY : C_/21/libft/ft_tolower.i
+
+# target to preprocess a source file
+C_/21/libft/ft_tolower.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_tolower.c.i
+.PHONY : C_/21/libft/ft_tolower.c.i
+
+C_/21/libft/ft_tolower.s: C_/21/libft/ft_tolower.c.s
+
+.PHONY : C_/21/libft/ft_tolower.s
+
+# target to generate assembly for a file
+C_/21/libft/ft_tolower.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_tolower.c.s
+.PHONY : C_/21/libft/ft_tolower.c.s
+
+C_/21/libft/ft_toupper.obj: C_/21/libft/ft_toupper.c.obj
+
+.PHONY : C_/21/libft/ft_toupper.obj
+
+# target to build an object file
+C_/21/libft/ft_toupper.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_toupper.c.obj
+.PHONY : C_/21/libft/ft_toupper.c.obj
+
+C_/21/libft/ft_toupper.i: C_/21/libft/ft_toupper.c.i
+
+.PHONY : C_/21/libft/ft_toupper.i
+
+# target to preprocess a source file
+C_/21/libft/ft_toupper.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_toupper.c.i
+.PHONY : C_/21/libft/ft_toupper.c.i
+
+C_/21/libft/ft_toupper.s: C_/21/libft/ft_toupper.c.s
+
+.PHONY : C_/21/libft/ft_toupper.s
+
+# target to generate assembly for a file
+C_/21/libft/ft_toupper.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_libft.dir\build.make CMakeFiles/test_libft.dir/C_/21/libft/ft_toupper.c.s
+.PHONY : C_/21/libft/ft_toupper.c.s
 
 # Help Target
 help:
@@ -304,15 +547,42 @@ help:
 	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... test
-	@echo ... Example
-	@echo ... ExampleTests
 	@echo ... gmock
 	@echo ... gmock_main
 	@echo ... gtest
 	@echo ... gtest_main
-	@echo ... Example.obj
-	@echo ... Example.i
-	@echo ... Example.s
+	@echo ... test_libft
+	@echo ... tests
+	@echo ... C_/21/libft/ft_atoi.obj
+	@echo ... C_/21/libft/ft_atoi.i
+	@echo ... C_/21/libft/ft_atoi.s
+	@echo ... C_/21/libft/ft_isalnum.obj
+	@echo ... C_/21/libft/ft_isalnum.i
+	@echo ... C_/21/libft/ft_isalnum.s
+	@echo ... C_/21/libft/ft_isalpha.obj
+	@echo ... C_/21/libft/ft_isalpha.i
+	@echo ... C_/21/libft/ft_isalpha.s
+	@echo ... C_/21/libft/ft_isascii.obj
+	@echo ... C_/21/libft/ft_isascii.i
+	@echo ... C_/21/libft/ft_isascii.s
+	@echo ... C_/21/libft/ft_isdigit.obj
+	@echo ... C_/21/libft/ft_isdigit.i
+	@echo ... C_/21/libft/ft_isdigit.s
+	@echo ... C_/21/libft/ft_isprint.obj
+	@echo ... C_/21/libft/ft_isprint.i
+	@echo ... C_/21/libft/ft_isprint.s
+	@echo ... C_/21/libft/ft_strncmp.obj
+	@echo ... C_/21/libft/ft_strncmp.i
+	@echo ... C_/21/libft/ft_strncmp.s
+	@echo ... C_/21/libft/ft_strnstr.obj
+	@echo ... C_/21/libft/ft_strnstr.i
+	@echo ... C_/21/libft/ft_strnstr.s
+	@echo ... C_/21/libft/ft_tolower.obj
+	@echo ... C_/21/libft/ft_tolower.i
+	@echo ... C_/21/libft/ft_tolower.s
+	@echo ... C_/21/libft/ft_toupper.obj
+	@echo ... C_/21/libft/ft_toupper.i
+	@echo ... C_/21/libft/ft_toupper.s
 .PHONY : help
 
 

@@ -67,23 +67,13 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\21\Example
+CMAKE_SOURCE_DIR = C:\21\test_libft
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\21\Example
+CMAKE_BINARY_DIR = C:\21\test_libft
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -142,6 +132,16 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -156,14 +156,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\21\Example && $(CMAKE_COMMAND) -E cmake_progress_start C:\21\Example\CMakeFiles C:\21\Example\test\CMakeFiles\progress.marks
-	cd /d C:\21\Example && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\21\Example\CMakeFiles 0
+	cd /d C:\21\test_libft && $(CMAKE_COMMAND) -E cmake_progress_start C:\21\test_libft\CMakeFiles C:\21\test_libft\test\CMakeFiles\progress.marks
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\21\test_libft\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\21\Example && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test/clean
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test/clean
 .PHONY : clean
 
 # The main clean target
@@ -173,60 +173,303 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\21\Example && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test/preinstall
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\21\Example && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test/preinstall
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\21\Example && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\21\test_libft && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-test/CMakeFiles/ExampleTests.dir/rule:
-	cd /d C:\21\Example && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test/CMakeFiles/ExampleTests.dir/rule
-.PHONY : test/CMakeFiles/ExampleTests.dir/rule
+test/CMakeFiles/tests.dir/rule:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test/CMakeFiles/tests.dir/rule
+.PHONY : test/CMakeFiles/tests.dir/rule
 
 # Convenience name for target.
-ExampleTests: test/CMakeFiles/ExampleTests.dir/rule
+tests: test/CMakeFiles/tests.dir/rule
 
-.PHONY : ExampleTests
+.PHONY : tests
 
 # fast build rule for target.
-ExampleTests/fast:
-	cd /d C:\21\Example && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\ExampleTests.dir\build.make test/CMakeFiles/ExampleTests.dir/build
-.PHONY : ExampleTests/fast
+tests/fast:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/build
+.PHONY : tests/fast
 
-ExampleTests.obj: ExampleTests.cpp.obj
+src/test_ft_atoi.obj: src/test_ft_atoi.cpp.obj
 
-.PHONY : ExampleTests.obj
+.PHONY : src/test_ft_atoi.obj
 
 # target to build an object file
-ExampleTests.cpp.obj:
-	cd /d C:\21\Example && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\ExampleTests.dir\build.make test/CMakeFiles/ExampleTests.dir/ExampleTests.cpp.obj
-.PHONY : ExampleTests.cpp.obj
+src/test_ft_atoi.cpp.obj:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_atoi.cpp.obj
+.PHONY : src/test_ft_atoi.cpp.obj
 
-ExampleTests.i: ExampleTests.cpp.i
+src/test_ft_atoi.i: src/test_ft_atoi.cpp.i
 
-.PHONY : ExampleTests.i
+.PHONY : src/test_ft_atoi.i
 
 # target to preprocess a source file
-ExampleTests.cpp.i:
-	cd /d C:\21\Example && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\ExampleTests.dir\build.make test/CMakeFiles/ExampleTests.dir/ExampleTests.cpp.i
-.PHONY : ExampleTests.cpp.i
+src/test_ft_atoi.cpp.i:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_atoi.cpp.i
+.PHONY : src/test_ft_atoi.cpp.i
 
-ExampleTests.s: ExampleTests.cpp.s
+src/test_ft_atoi.s: src/test_ft_atoi.cpp.s
 
-.PHONY : ExampleTests.s
+.PHONY : src/test_ft_atoi.s
 
 # target to generate assembly for a file
-ExampleTests.cpp.s:
-	cd /d C:\21\Example && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\ExampleTests.dir\build.make test/CMakeFiles/ExampleTests.dir/ExampleTests.cpp.s
-.PHONY : ExampleTests.cpp.s
+src/test_ft_atoi.cpp.s:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_atoi.cpp.s
+.PHONY : src/test_ft_atoi.cpp.s
+
+src/test_ft_isalnum.obj: src/test_ft_isalnum.cpp.obj
+
+.PHONY : src/test_ft_isalnum.obj
+
+# target to build an object file
+src/test_ft_isalnum.cpp.obj:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_isalnum.cpp.obj
+.PHONY : src/test_ft_isalnum.cpp.obj
+
+src/test_ft_isalnum.i: src/test_ft_isalnum.cpp.i
+
+.PHONY : src/test_ft_isalnum.i
+
+# target to preprocess a source file
+src/test_ft_isalnum.cpp.i:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_isalnum.cpp.i
+.PHONY : src/test_ft_isalnum.cpp.i
+
+src/test_ft_isalnum.s: src/test_ft_isalnum.cpp.s
+
+.PHONY : src/test_ft_isalnum.s
+
+# target to generate assembly for a file
+src/test_ft_isalnum.cpp.s:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_isalnum.cpp.s
+.PHONY : src/test_ft_isalnum.cpp.s
+
+src/test_ft_isalpha.obj: src/test_ft_isalpha.cpp.obj
+
+.PHONY : src/test_ft_isalpha.obj
+
+# target to build an object file
+src/test_ft_isalpha.cpp.obj:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_isalpha.cpp.obj
+.PHONY : src/test_ft_isalpha.cpp.obj
+
+src/test_ft_isalpha.i: src/test_ft_isalpha.cpp.i
+
+.PHONY : src/test_ft_isalpha.i
+
+# target to preprocess a source file
+src/test_ft_isalpha.cpp.i:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_isalpha.cpp.i
+.PHONY : src/test_ft_isalpha.cpp.i
+
+src/test_ft_isalpha.s: src/test_ft_isalpha.cpp.s
+
+.PHONY : src/test_ft_isalpha.s
+
+# target to generate assembly for a file
+src/test_ft_isalpha.cpp.s:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_isalpha.cpp.s
+.PHONY : src/test_ft_isalpha.cpp.s
+
+src/test_ft_isascii.obj: src/test_ft_isascii.cpp.obj
+
+.PHONY : src/test_ft_isascii.obj
+
+# target to build an object file
+src/test_ft_isascii.cpp.obj:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_isascii.cpp.obj
+.PHONY : src/test_ft_isascii.cpp.obj
+
+src/test_ft_isascii.i: src/test_ft_isascii.cpp.i
+
+.PHONY : src/test_ft_isascii.i
+
+# target to preprocess a source file
+src/test_ft_isascii.cpp.i:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_isascii.cpp.i
+.PHONY : src/test_ft_isascii.cpp.i
+
+src/test_ft_isascii.s: src/test_ft_isascii.cpp.s
+
+.PHONY : src/test_ft_isascii.s
+
+# target to generate assembly for a file
+src/test_ft_isascii.cpp.s:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_isascii.cpp.s
+.PHONY : src/test_ft_isascii.cpp.s
+
+src/test_ft_isdigit.obj: src/test_ft_isdigit.cpp.obj
+
+.PHONY : src/test_ft_isdigit.obj
+
+# target to build an object file
+src/test_ft_isdigit.cpp.obj:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_isdigit.cpp.obj
+.PHONY : src/test_ft_isdigit.cpp.obj
+
+src/test_ft_isdigit.i: src/test_ft_isdigit.cpp.i
+
+.PHONY : src/test_ft_isdigit.i
+
+# target to preprocess a source file
+src/test_ft_isdigit.cpp.i:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_isdigit.cpp.i
+.PHONY : src/test_ft_isdigit.cpp.i
+
+src/test_ft_isdigit.s: src/test_ft_isdigit.cpp.s
+
+.PHONY : src/test_ft_isdigit.s
+
+# target to generate assembly for a file
+src/test_ft_isdigit.cpp.s:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_isdigit.cpp.s
+.PHONY : src/test_ft_isdigit.cpp.s
+
+src/test_ft_isprint.obj: src/test_ft_isprint.cpp.obj
+
+.PHONY : src/test_ft_isprint.obj
+
+# target to build an object file
+src/test_ft_isprint.cpp.obj:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_isprint.cpp.obj
+.PHONY : src/test_ft_isprint.cpp.obj
+
+src/test_ft_isprint.i: src/test_ft_isprint.cpp.i
+
+.PHONY : src/test_ft_isprint.i
+
+# target to preprocess a source file
+src/test_ft_isprint.cpp.i:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_isprint.cpp.i
+.PHONY : src/test_ft_isprint.cpp.i
+
+src/test_ft_isprint.s: src/test_ft_isprint.cpp.s
+
+.PHONY : src/test_ft_isprint.s
+
+# target to generate assembly for a file
+src/test_ft_isprint.cpp.s:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_isprint.cpp.s
+.PHONY : src/test_ft_isprint.cpp.s
+
+src/test_ft_strncmp.obj: src/test_ft_strncmp.cpp.obj
+
+.PHONY : src/test_ft_strncmp.obj
+
+# target to build an object file
+src/test_ft_strncmp.cpp.obj:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_strncmp.cpp.obj
+.PHONY : src/test_ft_strncmp.cpp.obj
+
+src/test_ft_strncmp.i: src/test_ft_strncmp.cpp.i
+
+.PHONY : src/test_ft_strncmp.i
+
+# target to preprocess a source file
+src/test_ft_strncmp.cpp.i:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_strncmp.cpp.i
+.PHONY : src/test_ft_strncmp.cpp.i
+
+src/test_ft_strncmp.s: src/test_ft_strncmp.cpp.s
+
+.PHONY : src/test_ft_strncmp.s
+
+# target to generate assembly for a file
+src/test_ft_strncmp.cpp.s:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_strncmp.cpp.s
+.PHONY : src/test_ft_strncmp.cpp.s
+
+src/test_ft_strnstr.obj: src/test_ft_strnstr.cpp.obj
+
+.PHONY : src/test_ft_strnstr.obj
+
+# target to build an object file
+src/test_ft_strnstr.cpp.obj:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_strnstr.cpp.obj
+.PHONY : src/test_ft_strnstr.cpp.obj
+
+src/test_ft_strnstr.i: src/test_ft_strnstr.cpp.i
+
+.PHONY : src/test_ft_strnstr.i
+
+# target to preprocess a source file
+src/test_ft_strnstr.cpp.i:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_strnstr.cpp.i
+.PHONY : src/test_ft_strnstr.cpp.i
+
+src/test_ft_strnstr.s: src/test_ft_strnstr.cpp.s
+
+.PHONY : src/test_ft_strnstr.s
+
+# target to generate assembly for a file
+src/test_ft_strnstr.cpp.s:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_strnstr.cpp.s
+.PHONY : src/test_ft_strnstr.cpp.s
+
+src/test_ft_tolower.obj: src/test_ft_tolower.cpp.obj
+
+.PHONY : src/test_ft_tolower.obj
+
+# target to build an object file
+src/test_ft_tolower.cpp.obj:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_tolower.cpp.obj
+.PHONY : src/test_ft_tolower.cpp.obj
+
+src/test_ft_tolower.i: src/test_ft_tolower.cpp.i
+
+.PHONY : src/test_ft_tolower.i
+
+# target to preprocess a source file
+src/test_ft_tolower.cpp.i:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_tolower.cpp.i
+.PHONY : src/test_ft_tolower.cpp.i
+
+src/test_ft_tolower.s: src/test_ft_tolower.cpp.s
+
+.PHONY : src/test_ft_tolower.s
+
+# target to generate assembly for a file
+src/test_ft_tolower.cpp.s:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_tolower.cpp.s
+.PHONY : src/test_ft_tolower.cpp.s
+
+src/test_ft_toupper.obj: src/test_ft_toupper.cpp.obj
+
+.PHONY : src/test_ft_toupper.obj
+
+# target to build an object file
+src/test_ft_toupper.cpp.obj:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_toupper.cpp.obj
+.PHONY : src/test_ft_toupper.cpp.obj
+
+src/test_ft_toupper.i: src/test_ft_toupper.cpp.i
+
+.PHONY : src/test_ft_toupper.i
+
+# target to preprocess a source file
+src/test_ft_toupper.cpp.i:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_toupper.cpp.i
+.PHONY : src/test_ft_toupper.cpp.i
+
+src/test_ft_toupper.s: src/test_ft_toupper.cpp.s
+
+.PHONY : src/test_ft_toupper.s
+
+# target to generate assembly for a file
+src/test_ft_toupper.cpp.s:
+	cd /d C:\21\test_libft && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\tests.dir\build.make test/CMakeFiles/tests.dir/src/test_ft_toupper.cpp.s
+.PHONY : src/test_ft_toupper.cpp.s
 
 # Help Target
 help:
@@ -241,10 +484,37 @@ help:
 	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... test
-	@echo ... ExampleTests
-	@echo ... ExampleTests.obj
-	@echo ... ExampleTests.i
-	@echo ... ExampleTests.s
+	@echo ... tests
+	@echo ... src/test_ft_atoi.obj
+	@echo ... src/test_ft_atoi.i
+	@echo ... src/test_ft_atoi.s
+	@echo ... src/test_ft_isalnum.obj
+	@echo ... src/test_ft_isalnum.i
+	@echo ... src/test_ft_isalnum.s
+	@echo ... src/test_ft_isalpha.obj
+	@echo ... src/test_ft_isalpha.i
+	@echo ... src/test_ft_isalpha.s
+	@echo ... src/test_ft_isascii.obj
+	@echo ... src/test_ft_isascii.i
+	@echo ... src/test_ft_isascii.s
+	@echo ... src/test_ft_isdigit.obj
+	@echo ... src/test_ft_isdigit.i
+	@echo ... src/test_ft_isdigit.s
+	@echo ... src/test_ft_isprint.obj
+	@echo ... src/test_ft_isprint.i
+	@echo ... src/test_ft_isprint.s
+	@echo ... src/test_ft_strncmp.obj
+	@echo ... src/test_ft_strncmp.i
+	@echo ... src/test_ft_strncmp.s
+	@echo ... src/test_ft_strnstr.obj
+	@echo ... src/test_ft_strnstr.i
+	@echo ... src/test_ft_strnstr.s
+	@echo ... src/test_ft_tolower.obj
+	@echo ... src/test_ft_tolower.i
+	@echo ... src/test_ft_tolower.s
+	@echo ... src/test_ft_toupper.obj
+	@echo ... src/test_ft_toupper.i
+	@echo ... src/test_ft_toupper.s
 .PHONY : help
 
 
@@ -256,6 +526,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\21\Example && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\21\test_libft && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,8 +1,8 @@
-# Install script for directory: C:/21/Example
+# Install script for directory: C:/21/test_libft
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Example")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/test_libft")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,8 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/21/Example/googletest/cmake_install.cmake")
-  include("C:/21/Example/test/cmake_install.cmake")
+  include("C:/21/test_libft/googletest/cmake_install.cmake")
+  include("C:/21/test_libft/test/cmake_install.cmake")
 
 endif()
 
@@ -47,5 +47,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/21/Example/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/21/test_libft/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
